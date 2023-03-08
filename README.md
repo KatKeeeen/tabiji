@@ -1,24 +1,73 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# テーブル設計
 
-* Ruby version
+## users テーブル
 
-* System dependencies
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| birth_day          | date   | null: false               |
 
-* Configuration
+### Association
 
-* Database creation
+- has_many  :journals
 
-* Database initialization
 
-* How to run the test suite
+## journals テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| comment            | text       |                                |
+| description        | text       | null: false                    |
+| departure_date     | date       | null: false                    |
+| last_date          | date       | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to  :user
+- has_many    :events
+- has_many    :journal_prefectures
+
+
+## events テーブル
+
+| Column  | Type       | Options                       |
+| ------- | ---------- | ----------------------------- |
+| date    | date       | null: false                   |
+| time    | time       | null: false foreign_key: true |
+| comment | text       | null: false foreign_key: true |
+| journal | references | null: false foreign_key: true |
+
+### Association
+
+- belongs_to  :journal
+
+
+## prefectures テーブル
+
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| prefecture_list_id | integer | null: false |
+
+### Association
+
+- has_many    :journal_prefectures
+
+
+## journal_prefectures テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| journal_id    | references | null: false, foreign_key: true |
+| prefecture_id | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to  :journal
+- belongs_to  :prefectures
