@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :journals
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,4 +12,5 @@ class User < ApplicationRecord
     validates :nickname
     validates :birth_day
   end
+
 end

@@ -1,0 +1,43 @@
+<%= link_to(new_journal_path, class: 'post-btn') do %>
+  <span class='post-btn-text'>投稿する</span>
+<% end %>
+
+<%# 投稿一覧 %>
+  <div class='jpu-contents'>
+    <div class="subtitle" >
+      投稿一覧
+    </div>
+    <ul class='journal-lists'>
+
+      <%if @journals.present? %>
+        <% @journals.each do |journal| %>
+          <li class='list'>
+            <%= link_to "#" do %>
+              <div class='journal-img-content'>
+                <%#= image_tag journal.image, class: "journal-img" %>
+
+              </div>
+              <div class='journal-info'>
+                <h3 class='journal-title'>
+                  <%= journal.title %>
+                </h3>
+                <div class='journal-period'>
+                  <span><%= journal.departure_date %>〜<%= journal.last_date %></span>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+        
+      <% else %>
+        <li class='list'>
+          <div class='journal-info'>
+            <h3 class='journal-title'>
+              投稿がありません
+            </h3>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<%# /投稿一覧 %>
