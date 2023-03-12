@@ -12,7 +12,7 @@
       <%if @journals.present? %>
         <% @journals.each do |journal| %>
           <li class='list'>
-            <%= link_to "#" do %>
+            <%= link_to journal_path(journal.id) do %>
               <div class='journal-img-content'>
                 <%= image_tag journal.image, class: "journal-img" %>
 
