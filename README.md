@@ -23,7 +23,6 @@
 | ------------------ | ---------- | ------------------------------ |
 | title              | string     | null: false                    |
 | comment            | text       |                                |
-| description        | text       | null: false                    |
 | departure_date     | date       | null: false                    |
 | last_date          | date       | null: false                    |
 | user               | references | null: false, foreign_key: true |
@@ -40,8 +39,9 @@
 | Column  | Type       | Options                       |
 | ------- | ---------- | ----------------------------- |
 | date    | date       | null: false                   |
-| time    | time       | null: false foreign_key: true |
-| comment | text       | null: false foreign_key: true |
+| time    | time       | null: false                   |
+| place   | string     | null: false                   |
+| comment | text       | null: false                   |
 | journal | references | null: false foreign_key: true |
 
 ### Association
