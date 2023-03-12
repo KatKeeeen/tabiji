@@ -36,13 +36,13 @@
 
 ## events テーブル
 
-| Column  | Type       | Options                       |
-| ------- | ---------- | ----------------------------- |
-| date    | date       | null: false                   |
-| time    | time       | null: false                   |
-| place   | string     | null: false                   |
-| comment | text       | null: false                   |
-| journal | references | null: false foreign_key: true |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| date    | date       | null: false                    |
+| time    | time       | null: false                    |
+| place   | string     |                                |
+| comment | text       | null: false                    |
+| journal | references | null: false, foreign_key: true |
 
 ### Association
 

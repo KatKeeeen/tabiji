@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_12_045026) do
+ActiveRecord::Schema.define(version: 2023_03_12_122715) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 2023_03_12_045026) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "events", charset: "utf8mb4", force: :cascade do |t|
+    t.date "date", null: false
+    t.time "time", null: false
+    t.string "place"
+    t.text "comment", null: false
+    t.bigint "journal_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["journal_id"], name: "index_events_on_journal_id"
+  end
+
   create_table "journals", charset: "utf8mb4", force: :cascade do |t|
     t.string "title", null: false
     t.text "comment", null: false
@@ -67,5 +78,6 @@ ActiveRecord::Schema.define(version: 2023_03_12_045026) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "events", "journals"
   add_foreign_key "journals", "users"
 end
