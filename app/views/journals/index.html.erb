@@ -3,6 +3,8 @@
 <% end %>
 
 <%# 投稿一覧 %>
+  <%= current_user.nickname%>
+  
   <div class='jpu-contents'>
     <div class="subtitle" >
       投稿一覧
@@ -12,7 +14,7 @@
       <%if @journals.present? %>
         <% @journals.each do |journal| %>
           <li class='list'>
-            <%= link_to journal_path(journal.id) do %>
+            <%= link_to journal_events_path(journal.id) do %>
               <div class='journal-img-content'>
                 <%= image_tag journal.image, class: "journal-img" %>
 
