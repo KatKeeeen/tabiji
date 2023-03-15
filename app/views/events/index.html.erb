@@ -42,10 +42,12 @@
                   <%= event.comment %>
               </div>
             <% end %>
+            <%= link_to "削除", journal_event_path(@journal, event), method: :delete, class:"event-destroy" %>
           </li>
         <% end %>
-        
+
       <% else %>
+
         <li class='list'>
           <div class='journal-info'>
             <h3 class='journal-title'>
