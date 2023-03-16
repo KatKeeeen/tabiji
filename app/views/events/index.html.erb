@@ -61,11 +61,12 @@
   </div>
 <%# /投稿一覧 %>
 
-
-<%=link_to 'もどる', root_path, class:"back-btn" %>
-
 <%#イベント投稿%>
 <%= link_to(new_journal_event_path(@journal.id), class: 'post-btn') do %>
   <span class='post-btn-text'>投稿する</span>
 <% end %>
 <%#/イベント投稿%>
+
+<div>
+  <%=link_to 'もどる', root_path, class:"back-btn" %>
+</div>

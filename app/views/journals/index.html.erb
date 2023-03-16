@@ -1,9 +1,13 @@
+<div>
+  <h1><%= current_user.nickname%></h1>
+</div>
+
 <%= link_to(new_journal_path, class: 'post-btn') do %>
   <span class='post-btn-text'>投稿する</span>
 <% end %>
 
 <%# 投稿一覧 %>
-  <%= current_user.nickname%>
+
   
   <div class='jpu-contents'>
     <div class="subtitle" >

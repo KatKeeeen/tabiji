@@ -1,5 +1,4 @@
-
-    <h2 class="items-sell-title">情報を入力</h2>
+  <h2 class="items-sell-title">情報を入力</h2>
     <%= form_with(model: @journal, local: true) do |f| %>
 
       <%# 画像 %>
@@ -72,7 +71,9 @@
       <%# 下部ボタン %>
       <div class="sell-btn-contents">
         <%= f.submit "投稿する" ,class:"sell-btn" %>
+      </div>
+      <div>
         <%=link_to 'もどる', root_path, class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
-    <% end %>
+    <% end %>  
