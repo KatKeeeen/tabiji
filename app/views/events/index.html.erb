@@ -42,6 +42,7 @@
                   <%= event.comment %>
               </div>
             <% end %>
+            <%= link_to "編集", edit_journal_event_path(@journal, event), class:"event-destroy" %>
             <%= link_to "削除", journal_event_path(@journal, event), method: :delete, class:"event-destroy" %>
           </li>
         <% end %>
