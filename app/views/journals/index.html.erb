@@ -1,8 +1,14 @@
+<div>
+  <h1><%= current_user.nickname%></h1>
+</div>
+
 <%= link_to(new_journal_path, class: 'post-btn') do %>
   <span class='post-btn-text'>投稿する</span>
 <% end %>
 
 <%# 投稿一覧 %>
+
+  
   <div class='jpu-contents'>
     <div class="subtitle" >
       投稿一覧
@@ -12,7 +18,7 @@
       <%if @journals.present? %>
         <% @journals.each do |journal| %>
           <li class='list'>
-            <%= link_to journal_path(journal.id) do %>
+            <%= link_to journal_events_path(journal.id) do %>
               <div class='journal-img-content'>
                 <%= image_tag journal.image, class: "journal-img" %>
 

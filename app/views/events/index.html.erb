@@ -1,0 +1,72 @@
+<div class='journal-img-content'>
+  <%= image_tag @journal.image, class: "journal-img" %>
+
+</div>
+<div class='journal-info'>
+  <h3 class='journal-title'>
+    <%= @journal.title %>
+  </h3>
+  <div class='journal-period'>
+    <span><%= @journal.departure_date %>〜<%= @journal.last_date %></span>
+  </div>
+</div>
+
+<%# 投稿一覧 %>
+  <div class='jpu-contents'>
+    <div class="subtitle" >
+      投稿一覧
+    </div>
+    <ul class='journal-lists'>
+
+      <%if @events.present? %>
+        <% @events.each do |event| %>
+          <li class='list'>
+            <%= link_to '#' do %>
+              <div class='event-img-content'>
+                <%= image_tag event.image, class: "event-img" %>
+
+              </div>
+              <div class='event-info'>
+                
+                <div class='journal-period'>
+                  <span><%= event.date %></span>
+                </div>
+              </div>
+              <div class='event-time'>
+                  <%= event.time %>
+              </div>
+              <div class='event-place'>
+                  <%= event.place %>
+              </div>
+              <div class='event-comment'>
+                  <%= event.comment %>
+              </div>
+            <% end %>
+            <%= link_to "編集", edit_journal_event_path(@journal, event), class:"event-destroy" %>
+            <%= link_to "削除", journal_event_path(@journal, event), method: :delete, class:"event-destroy" %>
+          </li>
+        <% end %>
+
+      <% else %>
+
+        <li class='list'>
+          <div class='journal-info'>
+            <h3 class='journal-title'>
+              投稿がありません
+            </h3>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<%# /投稿一覧 %>
+
+<%#イベント投稿%>
+<%= link_to(new_journal_event_path(@journal.id), class: 'post-btn') do %>
+  <span class='post-btn-text'>投稿する</span>
+<% end %>
+<%#/イベント投稿%>
+
+<div>
+  <%=link_to 'もどる', root_path, class:"back-btn" %>
+</div>

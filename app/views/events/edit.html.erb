@@ -1,0 +1,82 @@
+  <h2 class="items-sell-title">情報を入力</h2>
+  <%= form_with model: @event, url: journal_event_path, local: true do |f| %>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"event-image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+
+    <%# 日付 %>
+    <div class='form-text-wrap'>
+      <label class="form-text">日付</label>
+      <span class="indispensable">必須</span>
+      </div>
+        <div class='input-birth-wrap'>
+          <%= raw sprintf(
+                      f.date_select(
+                        :date,
+                        class:'select-birth',
+                        id:"birth-date",
+                        use_month_numbers: true,
+                        prompt:'--',
+                        start_year: 1930,
+                        end_year: (Time.now.year - 5),
+                        date_separator: '%s'),
+                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        </div>
+      </div>
+    </div>
+    <%# /日付 %>
+
+    <%# 時間 %>
+    <div class='form-text-wrap'>
+      <label class="form-text">時間</label>
+      <span class="indispensable">必須</span>
+      </div>
+        <div class='input-birth-wrap'>
+          <%= f.time_select :time,class:'select-birth'%>
+        </div>
+      </div>
+    </div>
+    <%# /時間 %>
+
+    <%# 場所 %>
+    <div>
+      <div class="weight-bold-text">
+        場所
+        <span class="indispensable">任意</span>
+      </div>
+      <%= f.text_area :place, class:"events-text", id:"event-name", placeholder:"場所（任意 40文字まで)", maxlength:"40" %>
+    </div>
+    <%# /場所 %>
+    
+    <%# /コメント %>
+    <div class="events-explain">
+      <div class="weight-bold-text">
+        コメント
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :comment, class:"event-text", id:"event-info", placeholder:"コメント（必須 1,000文字まで）(例）空港に到着！" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+    <%# /コメント %>
+
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+    </div>
+    <div>
+      <%=link_to 'もどる', journal_events_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  <% end %>
