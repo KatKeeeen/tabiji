@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :journals, only: [:index, :new, :create, :destroy] do
     resources :events, only:[:index, :new, :create, :edit, :update, :destroy]
   end
+  resources :prefectures, only: :index
 end
