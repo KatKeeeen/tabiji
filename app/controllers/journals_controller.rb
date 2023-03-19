@@ -4,12 +4,13 @@ class JournalsController < ApplicationController
   end
 
   def new
-    @journal = Journal.new
+    @journal_journal_prefecture = JournalJournalPrefecture.new
   end
 
   def create
-    @journal = Journal.create(journal_params)
-    if @journal.save
+    @journal_journal_prefecture = JournalJournalPrefecture.new(journal_params)
+    if @journal_journal_prefecture.valid?
+      @journal_journal_prefecture.save
       redirect_to root_path
     else
       render :new
@@ -19,6 +20,6 @@ class JournalsController < ApplicationController
   private
 
   def journal_params
-    params.require(:journal).permit(:title, :comment, :departure_date, :last_date, :image).merge(user_id: current_user.id)
+    params.require(:journal_journal_prefecture).permit(:title, :comment, :departure_date, :last_date, :image, {prefecture_ids: []}).merge(user_id: current_user.id)
   end
 end
