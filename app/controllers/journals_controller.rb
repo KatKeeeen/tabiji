@@ -11,7 +11,7 @@ class JournalsController < ApplicationController
     @journal_journal_prefecture = JournalJournalPrefecture.new(journal_params)
     if @journal_journal_prefecture.valid?
       @journal_journal_prefecture.save
-      redirect_to journal_events_path
+      redirect_to root_path
     else
       render :new
     end
