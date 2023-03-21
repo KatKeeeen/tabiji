@@ -1,0 +1,18 @@
+<div>
+  <% @journals.each do |journal| %>
+    <li class='list'>
+      <%= link_to "#" do %>
+        <div class='journal-info'>
+          <%= image_tag journal.image, class: "journal-img" %>
+        </div>
+        <div class='journal-info'>
+          <%= journal.title %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</div>
+
+</div>
+  <%=link_to 'もどる', prefectures_path, class:"back-btn" %>
+</div>

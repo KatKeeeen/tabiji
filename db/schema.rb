@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_12_122715) do
+ActiveRecord::Schema.define(version: 2023_03_18_125648) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 2023_03_12_122715) do
     t.index ["journal_id"], name: "index_events_on_journal_id"
   end
 
+  create_table "journal_prefectures", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "journal_id", null: false
+    t.integer "prefecture_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["journal_id"], name: "index_journal_prefectures_on_journal_id"
+  end
+
   create_table "journals", charset: "utf8mb4", force: :cascade do |t|
     t.string "title", null: false
     t.text "comment", null: false
@@ -79,5 +87,6 @@ ActiveRecord::Schema.define(version: 2023_03_12_122715) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "events", "journals"
+  add_foreign_key "journal_prefectures", "journals"
   add_foreign_key "journals", "users"
 end

@@ -1,0 +1,13 @@
+<div>
+  <% @prefectures.each do |prefecture| %>
+    <li class='list'>
+      <%= link_to prefecture_path(prefecture.id) do %>
+        <div class='journal-info'>
+            <%= prefecture.name %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</div>
+
+<%=link_to 'もどる', root_path, class:"back-btn" %>

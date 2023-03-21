@@ -1,5 +1,5 @@
   <h2 class="items-sell-title">情報を入力</h2>
-    <%= form_with(model: @journal, local: true) do |f| %>
+    <%= form_with model: @journal_journal_prefecture, url: journals_path, local: true do |f| %>
 
       <%# 画像 %>
       <div class="img-upload">
@@ -67,6 +67,16 @@
         </div>
       </div>
       <%# /日程 %>
+
+      <%# 地域%>
+      <%= f.label :prefecture %>
+      <%= f.collection_check_boxes(:prefecture_ids, Prefecture.all, :id, :name, include_hidden: false) do |prefecture| %> 
+        <%= prefecture.label do %>
+          <%= prefecture.check_box %>
+          <%= prefecture.text %>
+        <% end %>
+      <% end %>
+      <%# 地域%>
 
       <%# 下部ボタン %>
       <div class="sell-btn-contents">
