@@ -1,53 +1,59 @@
-<div>
-  <h1><%= current_user.nickname%></h1>
-</div>
+<%= render "shared/header" %>
 
-<div>
-  <%=link_to '行った場所で検索', prefectures_path, class:"back-btn" %>
-</div>
+<div class='main-contents'>
 
-<%= link_to(new_journal_path, class: 'post-btn') do %>
-  <span class='post-btn-text'>投稿する</span>
-<% end %>
+  <div class='post-btn'>
+    <%= link_to(prefectures_path, class: 'prefecture-sarch-btn') do %>
+      <span>行った場所で検索</span>
+    <% end %>
 
-<%# 投稿一覧 %>
+    <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
+      <span>旅記録を作成する</span>
+    <% end %>
+  </div>
 
-  
-  <div class='jpu-contents'>
-    <div class="subtitle" >
-      投稿一覧
-    </div>
-    <ul class='journal-lists'>
+  <%# 投稿一覧 %>
+    <div class='journal-contents'>
+      <div class='journal-content-head'>
+        <div class="subtitle" >
+          旅記録一覧
+        </div>
+        
+      </div>
 
-      <%if @journals.present? %>
-        <% @journals.each do |journal| %>
-          <li class='list'>
-            <%= link_to journal_events_path(journal.id) do %>
-              <div class='journal-img-content'>
-                <%= image_tag journal.image, class: "journal-img" %>
-
-              </div>
-              <div class='journal-info'>
-                <h3 class='journal-title'>
-                  <%= journal.title %>
-                </h3>
-                <div class='journal-period'>
-                  <span><%= journal.departure_date %>〜<%= journal.last_date %></span>
+      <ul class='journal-lists'>
+        <%if @journals.present? %>
+          <% @journals.each do |journal| %>
+            <li class='list'>
+              <%= link_to journal_events_path(journal.id), class:"journal-content" do %>
+                <div class='journal-img-content'>
+                  <%= image_tag journal.image, class: "journal-img" %>
                 </div>
-              </div>
-            <% end %>
+                <div class='journal-info'>
+                  <h3 class='journal-title'>
+                    <%= journal.title %>
+                  </h3>
+                  <div class='journal-period'>
+                    <span><%= journal.departure_date.strftime("%Y年%-m月%-d日") %> 〜 <%= journal.last_date.strftime("%Y年%-m月%-d日") %></span>
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+          
+        <% else %>
+          <li class='list'>
+            <div class='journal-info'>
+              <h3 class='journal-title'>
+                投稿がありません
+              </h3>
+            </div>
           </li>
         <% end %>
-        
-      <% else %>
-        <li class='list'>
-          <div class='journal-info'>
-            <h3 class='journal-title'>
-              投稿がありません
-            </h3>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-<%# /投稿一覧 %>
+      </ul>
+    </div>
+  <%# /投稿一覧 %>
+
+</div>
+
+<%= render "shared/footer" %>
