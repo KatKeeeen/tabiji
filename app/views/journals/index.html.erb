@@ -2,15 +2,17 @@
 
 <div class='main-contents'>
 
-  <div class='post-btn'>
-    <%= link_to(prefectures_path, class: 'prefecture-sarch-btn') do %>
-      <span>行った場所で検索</span>
-    <% end %>
+  <%if @journals.present? %>
+    <div class='post-btn'>
+      <%= link_to(prefectures_path, class: 'prefecture-sarch-btn') do %>
+        <span>行った場所で検索</span>
+      <% end %>
 
-    <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
-      <span>旅記録を作成する</span>
-    <% end %>
-  </div>
+      <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
+        <span>旅記録を作成する</span>
+      <% end %>
+    </div>
+  <% end %>
 
   <%# 投稿一覧 %>
     <div class='journal-contents'>
@@ -18,7 +20,6 @@
         <div class="subtitle" >
           旅記録一覧
         </div>
-        
       </div>
 
       <ul class='journal-lists'>
@@ -42,13 +43,16 @@
           <% end %>
           
         <% else %>
-          <li class='list'>
             <div class='journal-info'>
-              <h3 class='journal-title'>
-                投稿がありません
+              <h3 class='journal-post-info'>
+                さあ旅日記を作成しよう！
               </h3>
+              <div class='post-btn'>
+                <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
+                  <span>旅記録を作成する</span>
+                <% end %>
+              </div>
             </div>
-          </li>
         <% end %>
       </ul>
     </div>

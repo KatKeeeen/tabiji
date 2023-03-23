@@ -48,6 +48,7 @@
 
 .journal-content {
   text-decoration: none;
+  color: #000000;
 }
 
 
@@ -75,4 +76,13 @@
 
 .journal-period {
   font-size: 12px;
+}
+
+.journal-info {
+  display: flex;
+  align-items: center;
+}
+
+.journal-post-info {
+  font-size: 20px;
 }

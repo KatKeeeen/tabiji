@@ -4,8 +4,9 @@
 
 .top-page-header {
   width: 100%;
-  padding: 2vh 10vw;
+  padding: 2vh 8vw;
   display: flex;
+  align-items: center;
   flex-direction: column;
   background-color: #89c5bd;
 }
@@ -14,11 +15,14 @@
 .nav {
   font-size: 18px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
-  padding: 1vh 0;
 }
 
+.tabiji-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
 
 .lists-user-management {
   display: flex;
