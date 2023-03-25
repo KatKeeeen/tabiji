@@ -11,22 +11,20 @@
 .prefecture-sarch-btn {
   text-decoration: none;
   font-size: 24px;
-  font-weight: bold;
-  color: #000000;
-  background-color: #ddd5b8;
-  border: 3px solid #000000;
-  padding: 1vh;
+  color: #fff;
+  background-color: #89c5bd;
+  padding: 2vh;
+  border-radius: 10px;
 }
 
 .journal-post-btn {
   text-decoration: none;
   font-size: 24px;
-  font-weight: bold;
-  color: #000000;
-  background-color: #ddd5b8;
-  border: 3px solid #000000;
-  padding: 1vh;
+  color: #fff;
+  background-color: #89c5bd;
+  padding: 2vh;
   margin-left: 5vh;
+  border-radius: 10px;
 }
 
 .journal-contents {
@@ -35,7 +33,6 @@
   flex-direction: column;
   align-items: center;
   padding: 6vh 0;
-  font-weight: bold;
 }
 
 .journal-content-head {
@@ -44,6 +41,7 @@
   justify-content: space-between;
   margin-bottom: 2vh;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .journal-content {
