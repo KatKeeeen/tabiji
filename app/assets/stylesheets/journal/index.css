@@ -12,7 +12,7 @@
   text-decoration: none;
   font-size: 24px;
   color: #fff;
-  background-color: #89c5bd;
+  background-color: #c8c89b;
   padding: 2vh;
   border-radius: 10px;
 }
@@ -21,7 +21,7 @@
   text-decoration: none;
   font-size: 24px;
   color: #fff;
-  background-color: #89c5bd;
+  background-color: #c8c89b;
   padding: 2vh;
   margin-left: 5vh;
   border-radius: 10px;
@@ -36,7 +36,7 @@
 }
 
 .journal-content-head {
-  width: 80%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2vh;
@@ -51,34 +51,33 @@
 
 
 .journal-lists {
-  width: 100%;
+  width: 85%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.list {
-  margin: 1vh;
+.journal-list {
+  margin: 2vh;
 }
 
 .journal-img {
-  width: 33vh;
-  height: 33vh;
-  border: 3px solid #000000;
+  width: 54vh;
+  height: 36vh;
+  object-fit: contain;
 }
 
 
 .journal-title {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .journal-period {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .journal-info {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .journal-post-info {

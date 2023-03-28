@@ -6,9 +6,8 @@
   width: 100%;
   padding: 2vh 8vw;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: #89c5bd;
+  background-color: #c8c89b;
 }
 
 
@@ -19,9 +18,15 @@
   width: 100%;
 }
 
+.header-icon {
+  display: flex;
+  align-items: center;
+  
+}
+
 .tabiji-icon {
-  width: 10vw;
-  margin-right: 10vw;
+  width: 8vw;
+  vertical-align:top;
 }
 
 .lists-user-management {

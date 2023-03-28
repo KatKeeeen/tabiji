@@ -25,7 +25,7 @@
       <ul class='journal-lists'>
         <%if @journals.present? %>
           <% @journals.each do |journal| %>
-            <li class='list'>
+            <li class='journal-list'>
               <%= link_to journal_events_path(journal.id), class:"journal-content" do %>
                 <div class='journal-img-content'>
                   <%= image_tag journal.image, class: "journal-img" %>
