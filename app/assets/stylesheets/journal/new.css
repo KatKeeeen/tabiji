@@ -1,4 +1,4 @@
-.journals-post-contents {
+.journal-post-contents {
   width: 100%;
   min-width: 800px;
   height: 100%;
@@ -67,11 +67,11 @@
 
 
 /* 旅情報 */
-.new-journals {
+.new-journal {
   padding: 2vh 0;
 }
 
-.journals-text {
+.journal-text {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -80,7 +80,7 @@
   resize: none;
 }
 
-.journals-explain {
+.journal-explain {
   margin-top: 2vh;
 }
 /* /旅情報 */
