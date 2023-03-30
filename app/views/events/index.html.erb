@@ -2,7 +2,7 @@
 
 <div class='journal-event-main'>
 
-  <div class='journal-event-info'>
+<div class='journal-event-info'>
 
     <div class='journal-event-header'>
       <div class='journal-event-info'>
@@ -48,7 +48,7 @@
                         <%= event.place %>
                     </div>
                     <div class='event-comment'>
-                        <%= event.comment %>
+                        <%= safe_join(event.comment.split("\n"),tag(:br)) %>
                     </div>
                   </div>
                 </div>

@@ -54,6 +54,7 @@
   width: 85%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .journal-list {
@@ -61,18 +62,18 @@
 }
 
 .journal-img {
-  width: 54vh;
-  height: 36vh;
+  width: 48vh;
+  height: 30vh;
   object-fit: contain;
 }
 
 
 .journal-title {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .journal-period {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .journal-info {
