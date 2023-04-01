@@ -13,3 +13,8 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "../event"
+import "../prefecture"
+
+//= require jquery
+//= require jquery_ujs
+

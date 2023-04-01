@@ -90,7 +90,6 @@
               <span class="indispensable">必須</span>
             </div>
           
-            <%= f.label :prefecture %>
             <%= f.collection_check_boxes(:prefecture_ids, Prefecture.all, :id, :name, include_hidden: false) do |prefecture| %> 
               <%= prefecture.label do %>
                 <%= prefecture.check_box %>

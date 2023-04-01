@@ -4,7 +4,7 @@
 
   <%if @journals.present? %>
     <div class='post-btn'>
-      <%= link_to(prefectures_path, class: 'prefecture-sarch-btn') do %>
+      <%= link_to(prefectures_path, class: 'prefecture-sarch-btn', data: {"turbolinks" => false}) do %>
         <span>行った場所で検索</span>
       <% end %>
 
