@@ -1,0 +1,114 @@
+.event-post-contents {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-form-wrap {
+  width: 50%;
+  background-color: white;
+  padding-bottom: 70px;
+}
+
+.event-form-group {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
+/* 日程 */
+.input-date-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-date-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-date-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+/* /日程 */
+
+
+/* 時間 */
+.input-time-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-time-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-time-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
+
+/* /時間 */
+
+.input-time-wrap {
+  margin-bottom: 15px;
+}
+
+.event-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: none;
+}
+
+.event-comment {
+  margin-bottom: 70px;
+}
+
+
+/* 下部ボタン */
+.event-btn-contents {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.event-create-btn {
+  background: #c8c89b;
+  border: 1px solid #c8c89b;
+  color: #fff;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+/* /下部ボタン */

@@ -1,0 +1,86 @@
+.main-contents {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.post-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.prefecture-sarch-btn {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  background-color: #c8c89b;
+  padding: 2vh;
+  border-radius: 10px;
+}
+
+.journal-post-btn {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  background-color: #c8c89b;
+  padding: 2vh;
+  margin-left: 5vh;
+  border-radius: 10px;
+}
+
+.journal-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6vh 0;
+}
+
+.journal-content-head {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.journal-content {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+.journal-lists {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.journal-list {
+  margin: 2vh;
+}
+
+.journal-img {
+  width: 48vh;
+  height: 30vh;
+  object-fit: contain;
+}
+
+
+.journal-title {
+  font-size: 18px;
+}
+
+.journal-period {
+  font-size: 12px;
+}
+
+.journal-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.journal-post-info {
+  font-size: 20px;
+}
