@@ -15,6 +15,8 @@
 }
 
 .login-flash-message {
+  margin-top: 50px;
   text-align: center;
-  color: red;
+  color: #c8c89b;
+  font-size: 15px;
 }

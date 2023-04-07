@@ -81,7 +81,7 @@
 }
 
 .journal-explain {
-  margin-top: 2vh;
+  margin-top: 30px;
 }
 /* /旅情報 */
 
@@ -92,9 +92,9 @@
   flex-wrap: wrap;
 }
 
-.input-piriod-wrap select {
-  width: 75px;
-  margin-top: 5px;
+.select-date {
+  width: 120px;
+  margin: 5px 0 30px 0;
   height: 45px;
   padding-left: 10px;
   border-radius: 4px;
@@ -147,3 +147,7 @@
 }
 
 /* /下部ボタン */
+
+.field_with_errors {
+  display: contents;
+}
