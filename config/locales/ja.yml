@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        birth_day: 生年月日
+
+  activemodel:
+    attributes:
+     save_journal_prefecture:
+      image: 画像
+      title: タイトル
+      comment: コメント
+      departure_date: 出発日
+      last_date: 最終日
