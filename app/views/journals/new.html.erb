@@ -1,10 +1,14 @@
 <%= render "shared/header" %>
 
+
+
   <div class="journal-post-contents">
 
     <div class='journal-form-wrap'>
     
-      <%= form_with model: @journal_journal_prefecture, url: journals_path, local: true do |f| %>
+      <%= render 'shared/error_messages', model: @journal_prefecture %>
+
+      <%= form_with model: @journal_prefecture, url: journals_path, local: true do |f| %>
 
         <div class='form-header'>
           <h1 class='form-header-text'>
@@ -48,38 +52,18 @@
 
           <%# 日程 %>
           <div class='weight-bold-text'>
-            <label class="form-text">出発日</label>
+            出発日
             <span class="indispensable">必須</span>
           </div>
           <div class='input-piriod-wrap'>
-            <%= raw sprintf(
-                        f.date_select(
-                          :departure_date,
-                          class:'select-departure-date',
-                          id:"departure-date",
-                          use_month_numbers: true,
-                          prompt:'--',
-                          start_year: (Time.now.year),
-                          end_year: (Time.now.year + 1),
-                          date_separator: '%s'),
-                        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            <%= f.date_field :departure_date, value: Time.now.strftime("%Y-%m-%d"), class:'select-date', id:"departure-date" %>
           </div>
           <div class='weight-bold-text'>
-            <label class="form-text">最終日</label>
+            最終日
             <span class="indispensable">必須</span>
           </div>
           <div class='input-piriod-wrap'>
-            <%= raw sprintf(
-                        f.date_select(
-                          :last_date,
-                          class:'select-last-date',
-                          id:"last-date",
-                          use_month_numbers: true,
-                          prompt:'--',
-                          start_year: (Time.now.year),
-                          end_year: (Time.now.year + 1 ),
-                          date_separator: '%s'),
-                        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            <%= f.date_field :last_date, value: Time.now.strftime("%Y-%m-%d"), class:'select-date', id:"last-date" %>
           </div>
           <%# /日程 %>
 
