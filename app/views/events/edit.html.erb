@@ -3,6 +3,8 @@
   <div class="event-post-contents">
     <div class='event-form-wrap'>
 
+      <%= render 'shared/error_messages', model: @event %>
+
       <%= form_with model: @event, url: journal_event_path, local: true do |f| %>
 
         <div class='form-header'>
@@ -34,17 +36,7 @@
             <span class="indispensable">必須</span>
           </div>
           <div class='input-date-wrap'>
-            <%= raw sprintf(
-                        f.date_select(
-                          :date,
-                          class:'select-birth',
-                          id:"birth-date",
-                          use_month_numbers: true,
-                          prompt:'--',
-                          start_year: (Time.now.year),
-                          end_year: (Time.now.year + 1),
-                          date_separator: '%s'),
-                        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            <%= f.date_field :date, value: @journal.departure_date, min: @journal.departure_date, max: @journal.last_date, class:'select-date', id:"event-date" %>
           </div>
           <%# /日付 %>
 

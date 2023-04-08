@@ -147,6 +147,7 @@
   margin-bottom: 50px;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .event-create-text {

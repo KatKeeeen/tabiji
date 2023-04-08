@@ -4,12 +4,19 @@ ja:
       user:
         nickname: ニックネーム
         birth_day: 生年月日
+      event:
+        image: 画像
+        date: 日付
+        time: 時間
+        place: 場所
+        comment: コメント
+
 
   activemodel:
     attributes:
-     save_journal_prefecture:
-      image: 画像
-      title: タイトル
-      comment: コメント
-      departure_date: 出発日
-      last_date: 最終日
+      save_journal_prefecture:
+        image: 画像
+        title: タイトル
+        comment: コメント
+        departure_date: 出発日
+        last_date: 最終日

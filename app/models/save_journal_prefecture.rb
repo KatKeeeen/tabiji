@@ -16,8 +16,10 @@ class SaveJournalPrefecture
 
   def save
     journal = Journal.create(image: image, title: title, comment: comment, departure_date: departure_date, last_date: last_date, user_id: user_id)
-    prefecture_ids.each do |prefecture_id|
-      JournalPrefecture.create(journal_id: journal.id, prefecture_id: prefecture_id)
+    unless prefecture_ids.nil?
+      prefecture_ids.each do |prefecture_id|
+        JournalPrefecture.create(journal_id: journal.id, prefecture_id: prefecture_id)
+      end
     end
   end
 

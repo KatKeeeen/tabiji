@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   end
 
   def new
+    @journal = Journal.find(params[:journal_id])
     @event = Event.new
   end
 
@@ -14,11 +15,13 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to journal_events_path
     else
+      @journal = Journal.find(params[:journal_id])
       render :new
     end
   end
 
   def edit
+    @journal = Journal.find(params[:journal_id])
     @event = Event.find(params[:id])
   end
 
@@ -28,6 +31,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to journal_events_path
     else
+      @journal = Journal.find(params[:journal_id])
       render :edit
     end
   end
