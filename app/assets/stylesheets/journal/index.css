@@ -1,6 +1,6 @@
 .main-contents {
   width: 100%;
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 
 .post-btn{
@@ -67,19 +67,19 @@
   object-fit: contain;
 }
 
+.journal-info {
+}
 
 .journal-title {
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .journal-period {
   font-size: 12px;
 }
 
-.journal-info {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .journal-post-info {
   font-size: 20px;

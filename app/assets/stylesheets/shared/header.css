@@ -2,17 +2,19 @@
   box-sizing: border-box;
 }
 
-.top-page-header {
+.header {
   width: 100%;
-  padding: 2vh 8vw;
+  padding: 1vh 8vw;
   display: flex;
   flex-direction: column;
   background-color: #c8c89b;
+  position: fixed;
+  top: 0;
 }
 
 
 .nav {
-  font-size: 22px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -25,7 +27,7 @@
 }
 
 .tabiji-icon {
-  width: 8vw;
+  width: 5vw;
   vertical-align:top;
 }
 
