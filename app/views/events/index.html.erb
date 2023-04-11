@@ -19,58 +19,70 @@
       <div class='journal-image'>
         <%= image_tag @journal.image, class: "journal-event-img" %>
       </div>
-    
     </div>
 
-    <%# 一覧 %>
-      <div class='event-contents'>
+    <%((@journal.last_date - @journal.departure_date + 1).to_i).times do |i|%>
 
-        <div class='event-left-border'></div>
+      <%# イベント一覧 %>
+        
 
-        <div class='event-lists'>
-          <%if @events.present? %>
-            <% @events.each do |event| %>
-              <li class='event-list'>    
-
-                <div class='event-content'>
-                  <div class='event-img-content'>
-                    <%= image_tag event.image, class: "event-img" %>
-                  </div>
-
-                  <div class='event-info'>
-                    <div class='event-period'>
-                      <span><%= event.date.strftime("%-m月%-d日") %></span>
-                    </div>
-                    <div class='event-time'>
-                        <%= event.time.strftime('%H:%M') %>
-                    </div>
-                    <div class='event-place'>
-                        <%= event.place %>
-                    </div>
-                    <div class='event-comment'>
-                        <%= safe_join(event.comment.split("\n"),tag(:br)) %>
-                    </div>
-                  </div>
-                </div>
-
-                <div class='event-btn'>
-                  <%= link_to "編集", edit_journal_event_path(@journal, event), class:"event-edit-btn" %>
-                  <%= link_to "削除", journal_event_path(@journal, event), method: :delete, class:"event-destroy-btn" %>
-                </div>
-
-
-              </li>
-            <% end %>
-
-          <% else %>
-              <div class='none-event-info'>
-                イベントがありません
-              </div>
+          <% if @events.pluck(:date).include? (@journal.departure_date + i)%>
+            <div class='event-date'>
+              <%=(@journal.departure_date + i).strftime("%-m月%-d日")%>
+            </div>
           <% end %>
-        </div>
 
-      </div>
-    <%# /一覧 %>
+        <div class='event-contents'>
+
+          <div class='event-left-border'></div>
+
+          <div class='event-lists'>
+            <%if @events.present? %>
+              <% @events.each do |event| %>
+                <%if event.date == (@journal.departure_date + i) %>
+                  <li class='event-list'>    
+
+                    <div class='event-content'>
+                      <div class='event-img-content'>
+                        <%if event.image.present?%>
+                          <%= image_tag event.image, class: "event-img" %>
+                        <% else %>
+                          <div class="event-img"></div>
+                        <% end %>
+                      </div>
+
+                      <div class='event-info'>
+                        <div class='event-time'>
+                          <%= event.time.strftime('%H:%M') %>
+                        </div>
+                        <div class='event-place'>
+                          <%= event.place %>
+                        </div>
+                        <div class='event-comment'>
+                          <%= safe_join(event.comment.split("\n"),tag(:br)) %>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='event-btn'>
+                      <%= link_to "編集", edit_journal_event_path(@journal, event), class:"event-edit-btn" %>
+                      <%= link_to "削除", journal_event_path(@journal, event), method: :delete, class:"event-destroy-btn" %>
+                    </div>
+                  </li>
+                <% end %>
+              <% end %>
+
+            <% else %>
+                <div class='none-event-info'>
+                  イベントがありません
+                </div>
+            <% end %>
+          </div>
+
+        </div>
+      <%# /イベント一覧 %>
+
+    <%end%>
 
   </div>
 

@@ -31,9 +31,9 @@
                   <%= image_tag journal.image, class: "journal-img" %>
                 </div>
                 <div class='journal-info'>
-                  <h3 class='journal-title'>
+                  <div class='journal-title'>
                     <%= journal.title %>
-                  </h3>
+                  </div>
                   <div class='journal-period'>
                     <span><%= journal.departure_date.strftime("%Y年%-m月%-d日") %> 〜 <%= journal.last_date.strftime("%Y年%-m月%-d日") %></span>
                   </div>
@@ -44,14 +44,14 @@
           
         <% else %>
             <div class='journal-info'>
-              <h3 class='journal-post-info'>
+              <div class='journal-post-info'>
                 あなたの旅を記録しよう！
-              </h3>
-              <div class='post-btn'>
+              </div>
+              <div class='first-post-btn'>
                 <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
                   <span>旅記録を作成する</span>
                 <% end %>
-              </div>
+            </div>
             </div>
         <% end %>
       </ul>
