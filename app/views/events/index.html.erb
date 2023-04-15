@@ -21,7 +21,10 @@
       </div>
     </div>
 
-    <%((@journal.last_date - @journal.departure_date + 1).to_i).times do |i|%>
+
+    <%if @events.present? %>
+
+      <%((@journal.last_date - @journal.departure_date + 1).to_i).times do |i|%>
 
       <%# イベント一覧 %>
         
@@ -37,7 +40,7 @@
           <div class='event-left-border'></div>
 
           <div class='event-lists'>
-            <%if @events.present? %>
+            
               <% @events.each do |event| %>
                 <%if event.date == (@journal.departure_date + i) %>
                   <li class='event-list'>    
@@ -72,17 +75,18 @@
                 <% end %>
               <% end %>
 
-            <% else %>
-                <div class='none-event-info'>
-                  イベントがありません
-                </div>
-            <% end %>
+            
           </div>
 
         </div>
       <%# /イベント一覧 %>
 
-    <%end%>
+     <%end%>
+
+    <% else %>
+      <div class='none-event-info'>
+      </div>
+    <% end %>
 
   </div>
 

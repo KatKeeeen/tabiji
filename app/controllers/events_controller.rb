@@ -51,6 +51,10 @@ class EventsController < ApplicationController
 
   def journal_setting
     @journal = Journal.find(params[:journal_id])
+
+    unless current_user.id == @journal.user_id
+      redirect_to journals_path
+    end
   end
 
   def event_setting
