@@ -17,7 +17,6 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to journal_events_path
     else
-
       render :new
     end
   end
@@ -51,6 +50,10 @@ class EventsController < ApplicationController
 
   def journal_setting
     @journal = Journal.find(params[:journal_id])
+
+    unless current_user.id == @journal.user_id
+      redirect_to journals_path
+    end
   end
 
   def event_setting

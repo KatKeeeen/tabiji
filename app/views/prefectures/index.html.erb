@@ -1,92 +1,100 @@
 <%= render "shared/header" %>
 
-<div class="japan_map">
-    <%= image_tag "prefectures.png" %>
-    <span class="area_btn area1" id="area-btn" data-area="1">北海道・東北</span>
-    <span class="area_btn area2" id="area-btn" data-area="2">関東</span>
-    <span class="area_btn area3" id="area-btn" data-area="3">中部</span>
-    <span class="area_btn area4" id="area-btn" data-area="4">近畿</span>
-    <span class="area_btn area5" id="area-btn" data-area="5">中国・四国</span>
-    <span class="area_btn area6" id="area-btn" data-area="6">九州・沖縄</span>
-    
-    <div class="area_overlay" id="area-overlay"></div>
-    <div class="pref_area" id="pref-area">
-        <div class="pref_list" id="pref-list-1">
-            <div class="pref"><%=link_to '北海道', prefecture_path([1]), class:"pref 1" %></div>
-            <div class="pref"><%=link_to '青森県', prefecture_path([2]), class:"pref 2" %></div>
-            <div class="pref"><%=link_to '岩手県', prefecture_path([3]), class:"pref 3" %></div>
-            <div class="pref"><%=link_to '宮城県', prefecture_path([4]), class:"pref 4" %></div>
-            <div class="pref"><%=link_to '秋田県', prefecture_path([5]), class:"pref 5" %></div>
-            <div class="pref"><%=link_to '山形県', prefecture_path([6]), class:"pref 6" %></div>
-            <div class="pref"><%=link_to '福島県', prefecture_path([7]), class:"pref 7" %></div>
-            <div></div>
-        </div>
-        
-        <div class="pref_list" id="pref-list-2">
-            <div class="pref"><%=link_to '茨木県', prefecture_path([8]), class:"pref 8" %></div>
-            <div class="pref"><%=link_to '栃木県', prefecture_path([9]), class:"pref 9" %></div>
-            <div class="pref"><%=link_to '群馬県', prefecture_path([10]), class:"pref 10" %></div>
-            <div class="pref"><%=link_to '埼玉県', prefecture_path([11]), class:"pref 11" %></div>
-            <div class="pref"><%=link_to '千葉県', prefecture_path([12]), class:"pref 12" %></div>
-            <div class="pref"><%=link_to '東京都', prefecture_path([13]), class:"pref 13" %></div>
-            <div class="pref"><%=link_to '神奈川県', prefecture_path([14]), class:"pref 14" %></div>
-            <div></div>
-        </div>
-        
-        <div class="pref_list" id="pref-list-3">
-            <div class="pref"><%=link_to '新潟県', prefecture_path([15]), class:"pref 15" %></div>
-            <div class="pref"><%=link_to '富山県', prefecture_path([16]), class:"pref 16" %></div>
-            <div class="pref"><%=link_to '石川県', prefecture_path([17]), class:"pref 17" %></div>
-            <div class="pref"><%=link_to '福井県', prefecture_path([18]), class:"pref 18" %></div>
-            <div class="pref"><%=link_to '山梨県', prefecture_path([19]), class:"pref 19" %></div>
-            <div class="pref"><%=link_to '長野県', prefecture_path([20]), class:"pref 20" %></div>
-            <div class="pref"><%=link_to '岐阜県', prefecture_path([21]), class:"pref 21" %></div>
-            <div class="pref"><%=link_to '静岡県', prefecture_path([22]), class:"pref 22" %></div>
-            <div class="pref"><%=link_to '愛知県', prefecture_path([23]), class:"pref 23" %></div>
-            <div></div>
-        </div>
-        
-        <div class="pref_list" id="pref-list-4">
-            <div class="pref"><%=link_to '三重県', prefecture_path([24]), class:"pref 24" %></div>
-            <div class="pref"><%=link_to '滋賀県', prefecture_path([25]), class:"pref 25" %></div>
-            <div class="pref"><%=link_to '京都府', prefecture_path([26]), class:"pref 26" %></div>
-            <div class="pref"><%=link_to '大阪府', prefecture_path([27]), class:"pref 27" %></div>
-            <div class="pref"><%=link_to '兵庫県', prefecture_path([28]), class:"pref 28" %></div>
-            <div class="pref"><%=link_to '奈良県', prefecture_path([29]), class:"pref 29" %></div>
-            <div class="pref"><%=link_to '和歌山県', prefecture_path([30]), class:"pref 30" %></div>
-            <div></div>
-        </div>
-        
-        <div class="pref_list" id="pref_list_5">
-            <div class="pref"><%=link_to '鳥取県', prefecture_path([31]), class:"pref 31" %></div>
-            <div class="pref"><%=link_to '島根県', prefecture_path([32]), class:"pref 32" %></div>
-            <div class="pref"><%=link_to '岡山県', prefecture_path([33]), class:"pref 33" %></div>
-            <div class="pref"><%=link_to '広島県', prefecture_path([34]), class:"pref 34" %></div>
-            <div class="pref"><%=link_to '山口県', prefecture_path([35]), class:"pref 35" %></div>
-            <div class="pref"><%=link_to '徳島県', prefecture_path([36]), class:"pref 36" %></div>
-            <div class="pref"><%=link_to '香川県', prefecture_path([37]), class:"pref 37" %></div>
-            <div class="pref"><%=link_to '愛媛県', prefecture_path([38]), class:"pref 38" %></div>
-            <div class="pref"><%=link_to '高知県', prefecture_path([39]), class:"pref 39" %></div>
-            <div></div>
-        </div>
-        
-        <div class="pref_list" id="pref-list-6">
-            <div class="pref"><%=link_to '福岡県', prefecture_path([40]), class:"pref 40" %></div>
-            <div class="pref"><%=link_to '佐賀県', prefecture_path([41]), class:"pref 41" %></div>
-            <div class="pref"><%=link_to '長崎県', prefecture_path([42]), class:"pref 42" %></div>
-            <div class="pref"><%=link_to '熊本県', prefecture_path([43]), class:"pref 43" %></div>
-            <div class="pref"><%=link_to '大分県', prefecture_path([44]), class:"pref 44" %></div>
-            <div class="pref"><%=link_to '宮崎県', prefecture_path([45]), class:"pref 45" %></div>
-            <div class="pref"><%=link_to '鹿児島県', prefecture_path([46]), class:"pref 46" %></div>
-            <div class="pref"><%=link_to '沖縄県', prefecture_path([47]), class:"pref 47" %></div>
-        </div>
-    </div>
-</div>
+<div class="prefecture-contents">
 
-<%# 下部ボタン %>
-    <div class="pref-btn-contents">
-        <%=link_to 'もどる', root_path, class:"top-back-btn" %>
+    <div class="prefecture-seach-contents">
+
+        <div class="japan_map">
+            <%= image_tag "prefectures.png" %>
+            <span class="area_btn area1" id="area-btn" data-area="1">北海道・東北</span>
+            <span class="area_btn area2" id="area-btn" data-area="2">関東</span>
+            <span class="area_btn area3" id="area-btn" data-area="3">中部</span>
+            <span class="area_btn area4" id="area-btn" data-area="4">近畿</span>
+            <span class="area_btn area5" id="area-btn" data-area="5">中国・四国</span>
+            <span class="area_btn area6" id="area-btn" data-area="6">九州・沖縄</span>
+            
+            <div class="area_overlay" id="area-overlay"></div>
+            <div class="pref_area" id="pref-area">
+                <div class="pref_list" id="pref-list-1">
+                    <div class="pref"><%=link_to '北海道', prefecture_path([1]), class:"pref 1" %></div>
+                    <div class="pref"><%=link_to '青森県', prefecture_path([2]), class:"pref 2" %></div>
+                    <div class="pref"><%=link_to '岩手県', prefecture_path([3]), class:"pref 3" %></div>
+                    <div class="pref"><%=link_to '宮城県', prefecture_path([4]), class:"pref 4" %></div>
+                    <div class="pref"><%=link_to '秋田県', prefecture_path([5]), class:"pref 5" %></div>
+                    <div class="pref"><%=link_to '山形県', prefecture_path([6]), class:"pref 6" %></div>
+                    <div class="pref"><%=link_to '福島県', prefecture_path([7]), class:"pref 7" %></div>
+                    <div></div>
+                </div>
+                
+                <div class="pref_list" id="pref-list-2">
+                    <div class="pref"><%=link_to '茨木県', prefecture_path([8]), class:"pref 8" %></div>
+                    <div class="pref"><%=link_to '栃木県', prefecture_path([9]), class:"pref 9" %></div>
+                    <div class="pref"><%=link_to '群馬県', prefecture_path([10]), class:"pref 10" %></div>
+                    <div class="pref"><%=link_to '埼玉県', prefecture_path([11]), class:"pref 11" %></div>
+                    <div class="pref"><%=link_to '千葉県', prefecture_path([12]), class:"pref 12" %></div>
+                    <div class="pref"><%=link_to '東京都', prefecture_path([13]), class:"pref 13" %></div>
+                    <div class="pref"><%=link_to '神奈川県', prefecture_path([14]), class:"pref 14" %></div>
+                    <div></div>
+                </div>
+                
+                <div class="pref_list" id="pref-list-3">
+                    <div class="pref"><%=link_to '新潟県', prefecture_path([15]), class:"pref 15" %></div>
+                    <div class="pref"><%=link_to '富山県', prefecture_path([16]), class:"pref 16" %></div>
+                    <div class="pref"><%=link_to '石川県', prefecture_path([17]), class:"pref 17" %></div>
+                    <div class="pref"><%=link_to '福井県', prefecture_path([18]), class:"pref 18" %></div>
+                    <div class="pref"><%=link_to '山梨県', prefecture_path([19]), class:"pref 19" %></div>
+                    <div class="pref"><%=link_to '長野県', prefecture_path([20]), class:"pref 20" %></div>
+                    <div class="pref"><%=link_to '岐阜県', prefecture_path([21]), class:"pref 21" %></div>
+                    <div class="pref"><%=link_to '静岡県', prefecture_path([22]), class:"pref 22" %></div>
+                    <div class="pref"><%=link_to '愛知県', prefecture_path([23]), class:"pref 23" %></div>
+                    <div></div>
+                </div>
+                
+                <div class="pref_list" id="pref-list-4">
+                    <div class="pref"><%=link_to '三重県', prefecture_path([24]), class:"pref 24" %></div>
+                    <div class="pref"><%=link_to '滋賀県', prefecture_path([25]), class:"pref 25" %></div>
+                    <div class="pref"><%=link_to '京都府', prefecture_path([26]), class:"pref 26" %></div>
+                    <div class="pref"><%=link_to '大阪府', prefecture_path([27]), class:"pref 27" %></div>
+                    <div class="pref"><%=link_to '兵庫県', prefecture_path([28]), class:"pref 28" %></div>
+                    <div class="pref"><%=link_to '奈良県', prefecture_path([29]), class:"pref 29" %></div>
+                    <div class="pref"><%=link_to '和歌山県', prefecture_path([30]), class:"pref 30" %></div>
+                    <div></div>
+                </div>
+                
+                <div class="pref_list" id="pref_list_5">
+                    <div class="pref"><%=link_to '鳥取県', prefecture_path([31]), class:"pref 31" %></div>
+                    <div class="pref"><%=link_to '島根県', prefecture_path([32]), class:"pref 32" %></div>
+                    <div class="pref"><%=link_to '岡山県', prefecture_path([33]), class:"pref 33" %></div>
+                    <div class="pref"><%=link_to '広島県', prefecture_path([34]), class:"pref 34" %></div>
+                    <div class="pref"><%=link_to '山口県', prefecture_path([35]), class:"pref 35" %></div>
+                    <div class="pref"><%=link_to '徳島県', prefecture_path([36]), class:"pref 36" %></div>
+                    <div class="pref"><%=link_to '香川県', prefecture_path([37]), class:"pref 37" %></div>
+                    <div class="pref"><%=link_to '愛媛県', prefecture_path([38]), class:"pref 38" %></div>
+                    <div class="pref"><%=link_to '高知県', prefecture_path([39]), class:"pref 39" %></div>
+                    <div></div>
+                </div>
+                
+                <div class="pref_list" id="pref-list-6">
+                    <div class="pref"><%=link_to '福岡県', prefecture_path([40]), class:"pref 40" %></div>
+                    <div class="pref"><%=link_to '佐賀県', prefecture_path([41]), class:"pref 41" %></div>
+                    <div class="pref"><%=link_to '長崎県', prefecture_path([42]), class:"pref 42" %></div>
+                    <div class="pref"><%=link_to '熊本県', prefecture_path([43]), class:"pref 43" %></div>
+                    <div class="pref"><%=link_to '大分県', prefecture_path([44]), class:"pref 44" %></div>
+                    <div class="pref"><%=link_to '宮崎県', prefecture_path([45]), class:"pref 45" %></div>
+                    <div class="pref"><%=link_to '鹿児島県', prefecture_path([46]), class:"pref 46" %></div>
+                    <div class="pref"><%=link_to '沖縄県', prefecture_path([47]), class:"pref 47" %></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-<%# /下部ボタン %>
+
+    <%# 下部ボタン %>
+        <div class="pref-btn-contents">
+            <%=link_to 'もどる', root_path, class:"top-back-btn" %>
+        </div>
+    <%# /下部ボタン %>
+
+
 
 <%= render "shared/footer" %>

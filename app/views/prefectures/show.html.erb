@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
 
+<div class='prefecture-contents'>
+
 <%# 投稿一覧 %>
   <div class='journal-contents'>
     <div class='journal-content-head'>
@@ -31,9 +33,11 @@
 <%# /投稿一覧 %>
 
 <%# 下部ボタン %>
-    <div class="pref-btn-contents">
-      <%=link_to 'もどる', prefectures_path, class:"top-back-btn" %>
-    </div>
+  <div class="pref-btn-contents">
+    <%=link_to 'もどる', prefectures_path, class:"top-back-btn" %>
+  </div>
 <%# /下部ボタン %>
+
+</div>
 
 <%= render "shared/footer" %>

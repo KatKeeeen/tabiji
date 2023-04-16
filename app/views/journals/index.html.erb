@@ -16,16 +16,16 @@
 
   <%# 投稿一覧 %>
     <div class='journal-contents'>
-      <div class='journal-content-head'>
-        <div class="subtitle" >
-          旅記録一覧
+      <%if @journals.present? %>
+        <div class='journal-content-head'>
+          <div class="subtitle" >
+            旅記録一覧
+          </div>
         </div>
-      </div>
 
-      <ul class='journal-lists'>
-        <%if @journals.present? %>
+        <div class='journal-lists'>
           <% @journals.each do |journal| %>
-            <li class='journal-list'>
+            <div class='journal-list'>
               <%= link_to journal_events_path(journal.id), class:"journal-content" do %>
                 <div class='journal-img-content'>
                   <%= image_tag journal.image, class: "journal-img" %>
@@ -35,26 +35,26 @@
                     <%= journal.title %>
                   </div>
                   <div class='journal-period'>
-                    <span><%= journal.departure_date.strftime("%Y年%-m月%-d日") %> 〜 <%= journal.last_date.strftime("%Y年%-m月%-d日") %></span>
+                    <%= journal.departure_date.strftime("%Y年%-m月%-d日") %> 〜 <%= journal.last_date.strftime("%Y年%-m月%-d日") %>
                   </div>
                 </div>
               <% end %>
-            </li>
+            </div>
           <% end %>
+        </div>
           
-        <% else %>
-            <div class='journal-info'>
-              <div class='journal-post-info'>
-                あなたの旅を記録しよう！
-              </div>
-              <div class='first-post-btn'>
-                <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
-                  <span>旅記録を作成する</span>
-                <% end %>
+      <% else %>
+          <div class='journal-first-info'>
+            <div class='journal-post-info'>
+              あなたの旅を記録しよう！
             </div>
+            <div class='first-post-btn'>
+              <%= link_to(new_journal_path, class: 'journal-post-btn') do %>
+                <span>旅記録を作成する</span>
+              <% end %>
             </div>
-        <% end %>
-      </ul>
+          </div>
+      <% end %>
     </div>
   <%# /投稿一覧 %>
 

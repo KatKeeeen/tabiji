@@ -9,7 +9,6 @@
 .form-wrap {
   width: 50%;
   background-color: white;
-  padding-bottom: 70px;
 }
 
 .form-header {
@@ -111,6 +110,7 @@
   line-height: 48px;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 
