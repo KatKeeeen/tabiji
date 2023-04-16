@@ -17,7 +17,6 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to journal_events_path
     else
-
       render :new
     end
   end

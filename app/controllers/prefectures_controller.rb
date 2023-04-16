@@ -10,9 +10,13 @@ class PrefecturesController < ApplicationController
   end
 
   def show
-    @prefecture = Prefecture.find(params[:id])
-    journal_ids = @prefecture.journal_prefectures.pluck(:journal_id)
-    @journals = Journal.where(user_id: current_user.id).find([journal_ids])
+    if JournalPrefecture.exists?(prefecture_id: params[:id])
+      @prefecture = Prefecture.find(params[:id])
+      journal_ids = @prefecture.journal_prefectures.pluck(:journal_id)
+      @journals = Journal.where(user_id: current_user.id).find([journal_ids])
+    else
+      render :index
+    end
   end
 
   private

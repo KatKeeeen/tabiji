@@ -1,5 +1,6 @@
-.prefecture-seach-contents {
+.prefecture-contents {
   margin-top: 10vh;
+  z-index: 1;
 }
 
 /* 日本地図DOM */
@@ -138,5 +139,5 @@
   display: flex;
   justify-content: center;
   flex-flow: column;
-  margin: 100px auto;
+  margin: 50px auto;
 }

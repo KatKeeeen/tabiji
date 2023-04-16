@@ -9,6 +9,7 @@
   flex-direction: column;
   background-color: #c8c89b;
   position: fixed;
+  z-index: 2;
   top: 0;
 }
 
