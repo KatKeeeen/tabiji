@@ -39,9 +39,9 @@ Tabiji
 
 
 ## 実装した機能についての画像・GIF
-* 旅記録機能 
-[旅記録](https://i.gyazo.com/ff6c7bf77557ce143b7513cb7d2d5a2a.mp4)
-* 都道府県検索
+* 旅記録機能  
+[旅記録](https://i.gyazo.com/ff6c7bf77557ce143b7513cb7d2d5a2a.mp4)  
+* 都道府県検索  
 [都道府県検索](https://i.gyazo.com/159304a9506cd86dcbabb5555998f088.mp4)
 
 
