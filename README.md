@@ -8,7 +8,7 @@ Tabiji
 
 
 ## URL
-現在未デプロイ
+[tabiji](https://tabiji.onrender.com)
 
 
 ## テスト用アカウント
