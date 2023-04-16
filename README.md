@@ -12,7 +12,8 @@ Tabiji
 
 
 ## テスト用アカウント
-現在未作成
+email: test@test.com  
+password: tabijin135
 
 
 ## 利用方法
