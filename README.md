@@ -12,8 +12,10 @@ Tabiji
 
 
 ## テスト用アカウント
-email: test@test.com  
-password: tabijin135
+* Basic認証ID：admin
+* Basic認証パスワード：@1007
+* メールアドレス: test@test.com  
+* パスワード: tabijin135
 
 
 ## 利用方法
