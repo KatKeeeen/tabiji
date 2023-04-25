@@ -1,30 +1,42 @@
 .main-contents {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 8vh;
+}
+
+.top-contents {
+  display: flex;
+}
+
+.journal-first-img {
+  width: 60vw;
+  height: 40vw;
+  object-fit: contain;
 }
 
 .post-btn{
-  display: flex;
+  width: 40vw;
+  display:flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
 }
 
-.prefecture-sarch-btn {
+.prefecture-search-btn {
   text-decoration: none;
-  font-size: 24px;
-  color: #fff;
-  background-color: #c8c89b;
+  font-size: 20px;
+  color: #6e6e6e;
   padding: 2vh;
-  border-radius: 10px;
+  margin: 5vh;
+  border: solid 1px #ababab;
 }
 
 .journal-post-btn {
   text-decoration: none;
-  font-size: 24px;
-  color: #fff;
-  background-color: #c8c89b;
+  font-size: 20px;
+  color: #6e6e6e;
   padding: 2vh;
-  margin-left: 5vh;
-  border-radius: 10px;
+  margin: 3vh;
+  border: solid 1px #ababab;
 }
 
 .journal-contents {

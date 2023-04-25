@@ -8,5 +8,6 @@
   align-items: center;
   justify-content: center;
   padding: 3vh 15vw;
-  background-color: #c8c89b;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 0px 1px rgba(193, 193, 193, 0.5);
 }
