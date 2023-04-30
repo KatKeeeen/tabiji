@@ -5,8 +5,8 @@
 
 .login-yellow-btn {
   width: 100%;
-  background: #c8c89b;
-  border: 1px solid #c8c89b;
+  background: #ababab;
+  border: 1px solid #ababab;
   color: #fff;
   line-height: 48px;
   font-size: 18px;
@@ -25,17 +25,16 @@
 
 .new-user-btn {
   font-size: 14px;
-  background: #aaa;
-  border: 1px solid #aaa;
+  background: #ababab;
+  border: 1px solid #ababab;
   color: #fff;
   padding: 15px 35px;
   text-decoration: none;
-  border-radius: 10px;
 }
 
 .login-flash-message {
   margin-top: 50px;
   text-align: center;
-  color: #c8c89b;
+  color: #ababab;
   font-size: 15px;
 }

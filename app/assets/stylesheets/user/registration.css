@@ -104,20 +104,18 @@
 
 .register-yellow-btn {
   width: 100%;
-  background: #c8c89b;
-  border: 1px solid #c8c89b;
+  background: #ababab;
+  border: 1px solid #ababab;
   color: #fff;
   line-height: 48px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 10px;
 }
 
 
 
 .error-alert{
   margin-top: 50px;
-
 }
 
 

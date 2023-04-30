@@ -11,7 +11,7 @@
   display: table;
   background-color: #baf8ff;
   padding: 1vh;
-  border: 2px solid #ababab;
+  border: 2px solid #000000;
 }
 /* 日本地図画像（スマホ対応用） */
 .japan_map img{
@@ -35,11 +35,17 @@
   white-space: nowrap;
 }
 
+.japan_map .area_btn:hover{
+  transform:scale(1.1,1.1);
+  transition:0.5s all;
+}
+
 /* ボタン配置（使用する日本地図画像により微調整） */
 .japan_map .area_btn.area1{
   top: 30%;
   right: 0;
   width: 30%;
+
 }
 .japan_map .area_btn.area2{
   top: 58%;

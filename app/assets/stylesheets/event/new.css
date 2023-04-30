@@ -95,13 +95,12 @@
 /* 下部ボタン */
 
 .event-create-btn {
-  background: #c8c89b;
-  border: 1px solid #c8c89b;
+  background: #ababab;
+  border: 1px solid #ababab;
   color: #fff;
   height: 50px;
   font-size: 14px;
   margin-bottom: 50px;
-  border-radius: 10px;
 }
 
 /* /下部ボタン */
