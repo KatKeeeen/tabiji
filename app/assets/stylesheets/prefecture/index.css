@@ -9,9 +9,9 @@
   box-sizing: border-box;
   margin: 50px auto;
   display: table;
-  background-color: #adf6ff;
+  background-color: #baf8ff;
   padding: 1vh;
-  border: 3px solid #000000;
+  border: 2px solid #ababab;
 }
 /* 日本地図画像（スマホ対応用） */
 .japan_map img{
@@ -22,12 +22,12 @@
 }
 /* 日本地図ボタン */
 .japan_map .area_btn{
+  color: #6e6e6e;
   position: absolute;
   z-index: 1;
   box-sizing: border-box;
   cursor: pointer;
-  border: 3px solid #333333;
-  border-radius: 5px;
+  border: 2px solid #ababab;
   background-color: #FFF;
   padding: 0.2em auto;
   font-weight: bold;
@@ -40,7 +40,6 @@
   top: 30%;
   right: 0;
   width: 30%;
-
 }
 .japan_map .area_btn.area2{
   top: 58%;
@@ -104,7 +103,7 @@
   flex-wrap: wrap;
   width: 90%;
   background-color: #FFF;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
 }
 
 .japan_map .pref_list >div{
