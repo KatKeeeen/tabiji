@@ -3,15 +3,14 @@
   margin: 50px auto;
 }
 
-.login-yellow-btn {
+.login-gray-btn {
   width: 100%;
-  background: #ababab;
+  background-color: #ffffff;
   border: 1px solid #ababab;
-  color: #fff;
+  color: #6e6e6e;
   line-height: 48px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 10px;
 }
 
 .user-btn-contents {
@@ -35,6 +34,6 @@
 .login-flash-message {
   margin-top: 50px;
   text-align: center;
-  color: #ababab;
+  color: #6e6e6e;
   font-size: 15px;
 }

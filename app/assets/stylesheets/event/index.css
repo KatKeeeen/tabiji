@@ -150,11 +150,11 @@
   margin: 80px auto;
 }
 
-.event-create-btn {
+.event-new-btn {
   width: 400px;
-  background: #ababab;
+  background-color: #fff;
   border: 1px solid #ababab;
-  color: #fff;
+  color: #6e6e6e;
   padding: 15px 35px;
   font-size: 14px;
   margin-bottom: 50px;
