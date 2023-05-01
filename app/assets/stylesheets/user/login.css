@@ -3,15 +3,14 @@
   margin: 50px auto;
 }
 
-.login-yellow-btn {
+.login-gray-btn {
   width: 100%;
-  background: #c8c89b;
-  border: 1px solid #c8c89b;
-  color: #fff;
+  background-color: #ffffff;
+  border: 1px solid #ababab;
+  color: #6e6e6e;
   line-height: 48px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 10px;
 }
 
 .user-btn-contents {
@@ -25,17 +24,16 @@
 
 .new-user-btn {
   font-size: 14px;
-  background: #aaa;
-  border: 1px solid #aaa;
+  background: #ababab;
+  border: 1px solid #ababab;
   color: #fff;
   padding: 15px 35px;
   text-decoration: none;
-  border-radius: 10px;
 }
 
 .login-flash-message {
   margin-top: 50px;
   text-align: center;
-  color: #c8c89b;
+  color: #6e6e6e;
   font-size: 15px;
 }

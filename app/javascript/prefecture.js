@@ -13,12 +13,14 @@ function prefecture (){
 
 
       //地域ボタンの色
+      /*
       element.addEventListener('mouseover', function(){
         element.setAttribute("style", "background-color:#FFBEDA;")
       });
       element.addEventListener('mouseout', function(){
         element.removeAttribute("style")
       });
+      */
 
       //都道府県の表示
       element.addEventListener('click', function() {
