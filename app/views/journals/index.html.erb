@@ -4,11 +4,13 @@
 
   <div class='top-contents'>
 
-    <%= link_to journal_events_path(@journals.first.id), class:"journal-content" do %>
-      <%= image_tag @journals.first.image, class: "journal-first-img"%>
-    <% end %>
-
     <%if @journals.present? %>
+
+      <%= link_to journal_events_path(@journals.first.id), class:"journal-content" do %>
+        <%= image_tag @journals.first.image, class: "journal-first-img"%>
+      <% end %>
+
+    
       <div class='post-btn'>
         <%= link_to(prefectures_path, class: 'prefecture-search-btn', data: {"turbolinks" => false}) do %>
           <span>行った場所で検索</span>
@@ -44,8 +46,9 @@
             </div>
           <% end %>
         </div>
+      <% end %>
           
-      <% else %>
+      <% unless @journals.present? %>
           <div class='journal-first-info'>
             <div class='journal-post-info'>
               あなたの旅を記録しよう！
