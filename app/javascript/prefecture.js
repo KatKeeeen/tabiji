@@ -33,7 +33,7 @@ function prefecture (){
         //都道府県ボタンの色
         prefs.forEach(function(pref) {
           pref.addEventListener('mouseover', function(){
-            pref.setAttribute("style", "background-color:#FFBEDA;")
+            pref.setAttribute("style", "background-color:#ababab;")
           })
           pref.addEventListener('mouseout', function(){
             pref.removeAttribute("style")

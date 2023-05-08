@@ -37,6 +37,16 @@
   margin-bottom: 15px;
 }
 
+.journal-event-right {
+  flex-direction: column;
+}
+
+.journal-event-edit {
+  text-align: end;
+  font-size: 15px;
+  margin-bottom: 2vh;
+}
+
 .journal-event-img {
   width: 48vh;
   height: 32vh;

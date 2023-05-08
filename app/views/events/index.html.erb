@@ -16,8 +16,13 @@
           <%= @journal.comment %>
         </div>
       </div>
-      <div class='journal-image'>
-        <%= image_tag @journal.image, class: "journal-event-img" %>
+      <div class='journal-event-right'>
+        <div class='journal-event-edit'>
+          •••
+        </div>
+        <div class='journal-image'>
+          <%= image_tag @journal.image, class: "journal-event-img" %>
+        </div>
       </div>
     </div>
 
